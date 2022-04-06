@@ -43,6 +43,35 @@
 								<h2 class="product_name"><?php echo $product['product_name']; ?></h2>
 								<p><?php echo $product['category_name']; ?> -> <?php echo $product['subcategory_name']; ?></p>
 							</div>
+							
+							<div class="pro_image_slider">
+							
+								<div class="thumbnailSlider">
+								<?php foreach($product['product_gallery_images'] as $image) { ?>
+									<!-- <a class="col-sm-2 col-xs-6" href="javascript:void(0);">
+	                                  <img src="<?php echo base_url(); ?>uploads/products/<?php echo $image; ?>" alt="product-img">
+	                                </a> -->
+									<div class="thumbnailImg">
+									<figure class="slide_img" data-product-name="<?php echo $product['product_name']; ?>" data-product-gallery-images='<?php echo json_encode($product['product_gallery_images']); ?>'>
+												<img src="<?php echo base_url(); ?>uploads/products/<?php echo $image; ?>" alt="product image">
+											</figure>
+									</div>
+									
+										
+									
+								<?php } ?>
+								</div>
+							</div>
+							<div class="product-info forDesktop">
+								<h2 class="product_name"><?php echo $product['product_name']; ?></h2>
+								<p><?php echo $product['category_name']; ?> -> <?php echo $product['subcategory_name']; ?></p>
+							</div>
+							<div class="content_block">
+			                        <h4 ><?php echo lang('product_descprition'); ?></h4>
+			                        <p><?php echo $product['product_descprition']; ?></p>
+		                        </div>
+						</div>
+						<div class="col-md-6">
 							<div class="pro_slider_singleimg lightbox" id="image-wrapper">
 								<a class="main-img" href="<?php echo $product['product_main_photo']; ?>">
                                   <img class="main-img" src="<?php echo $product['product_main_photo']; ?>" alt="product-img">
@@ -54,33 +83,15 @@
 	                            <?php } ?>
 								<!-- <img class="main-img" src="<?php echo $product['product_main_photo']; ?>" alt=""> -->
 							</div>
-							<div class="pro_image_slider">
-								<!-- <a class="col-sm-2 col-xs-6" href="<?php echo $product['product_main_photo']; ?>">
-                                  <img src="<?php echo $product['product_main_photo']; ?>" alt="product-img">
-                                </a> -->
-								<figure class="slide_img" data-product-name="<?php echo $product['product_name']; ?>" data-product-gallery-images='<?php echo json_encode($product['product_gallery_images']); ?>'>
-									<img src="<?php echo $product['product_main_photo']; ?>" alt="product main image">
-								</figure>
-								<?php foreach($product['product_gallery_images'] as $image) { ?>
-									<!-- <a class="col-sm-2 col-xs-6" href="javascript:void(0);">
-	                                  <img src="<?php echo base_url(); ?>uploads/products/<?php echo $image; ?>" alt="product-img">
-	                                </a> -->
-									<figure class="slide_img" data-product-name="<?php echo $product['product_name']; ?>" data-product-gallery-images='<?php echo json_encode($product['product_gallery_images']); ?>'>
-										<img src="<?php echo base_url(); ?>uploads/products/<?php echo $image; ?>" alt="product image">
-									</figure>
-								<?php } ?>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="product-info forDesktop">
+							<!-- <div class="product-info forDesktop">
 								<h2 class="product_name"><?php echo $product['product_name']; ?></h2>
 								<p><?php echo $product['category_name']; ?> -> <?php echo $product['subcategory_name']; ?></p>
-							</div>
+							</div> -->
 							<div class="content_main">
-								<div class="content_block">
+								<!-- <div class="content_block">
 			                        <h4 ><?php echo lang('product_descprition'); ?></h4>
 			                        <p><?php echo $product['product_descprition']; ?></p>
-		                        </div>
+		                        </div> -->
 		                        <!-- <button class="btn_expand readmore">Read more...</button> -->
 
 		                        <div class="table_main">
@@ -149,5 +160,9 @@
 		$('.pro_slider_main').slick({
 		    rtl: true
 		});
+		// $(".closeMenuBtn").on("click",function(){
+		// 	$("#sidebar").css("display", "none")
+		// 	$("#content").css("width", "100%")
+		// })
 	</script>
 </section>

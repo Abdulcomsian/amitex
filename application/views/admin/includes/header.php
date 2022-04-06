@@ -54,7 +54,9 @@
         <header id="header" class="clearfix" data-spy="affix" data-offset-top="65">
             <ul class="header-inner">
                 
-                <li class="logo">
+            
+                <li class="logo" style="display: flex; align-item: center">
+                <span class="closeMenuBtn" type="button"><i class="glyphicon glyphicon-arrow-right"></i></span>
                     <a href="<?php echo base_url(); ?>admin/dashboard" class="admin-heading"><?php echo SITE_NAME; ?></a>
                     <div id="menu-trigger"><i class="zmdi zmdi-menu"></i></div>
                 </li>
@@ -82,3 +84,18 @@
                 </li>
             </ul>
         </header>
+        <script>
+		$(".closeMenuBtn").on("click",function(){
+			if($("#sidebar").css("display")=='none'){
+                console.log("heelo2")
+			    $("#content.product-page-main").css("margin-right", "240px")
+                $("aside#sidebar").css("display","block");
+                $(".closeMenuBtn").html("<i class='glyphicon glyphicon-arrow-right'></i>")
+              
+            } else{
+                $(".closeMenuBtn").html("<i class='glyphicon glyphicon-arrow-left'></i>")
+                $("aside#sidebar").css("display","none");
+                $("#content.product-page-main").css("margin-right", "0px")
+            }
+		})
+	</script>

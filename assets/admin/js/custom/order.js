@@ -59,6 +59,8 @@ $(document).ready(function(){
 		$('a.main-img').attr('href',$(this).attr('src'));
 	});
 
+	
+
 
 
 	 // $(document).on('click','.pro_slider_main .slide_img img', function() {

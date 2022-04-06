@@ -116,7 +116,7 @@ switch (ENVIRONMENT)
   case 'local':
     /*Paths*/
     define('SITE_HOST', 'http://localhost/');
-    define('ROOT_FOLDER', 'amitex-app/');
+    define('ROOT_FOLDER', 'amitex/');
 
     /*Site Related Settings*/
     define('ADMIN_SAVE_LOG', false);

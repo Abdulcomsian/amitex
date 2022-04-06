@@ -13717,3 +13717,40 @@ aside#sidebar {
 .dropzone .dz-preview.dz-image-preview {
     z-index: 1 !important;
 }
+.pro_image_slider .slick-track {
+    width: 100% !important;
+    transform: initial !important;
+  }
+  .pro_image_slider  .thumbnailSlider{
+      display: flex;
+      width: 100% !important;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  .pro_image_slider  .thumbnailSlider .thumbnailImg{
+      width: 34%;
+  }
+  .pro_image_slider{
+      height: 350px;
+      overflow: scroll;
+  }
+  .product-info.forDesktop{
+      margin-top: 150px;
+  }
+  .closeMenuBtn{
+    position: absolute;
+    top: 13px;
+    left: 8px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  .header-inner>li.logo>a{
+      position: relative;
+      right: 40px;
+  }
+  .hideMenu{
+      display: none;
+  }

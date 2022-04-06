@@ -77,9 +77,9 @@ $query_builder = TRUE;
 $db['default'] = array(
     'dsn' => '',
     'hostname' => 'localhost',
-    'username' => 'sorav',
-    'password' => 'root@123',
-    'database' => 'amitex-app',
+    'username' => 'root',
+    'password' => '',
+    'database' => 'amitex',
     'dbdriver' => 'mysqli',
     'dbprefix' => '',
     'pconnect' => FALSE,
@@ -98,21 +98,21 @@ $db['default'] = array(
 
 switch (ENVIRONMENT) {
     case 'local':
-        $db['default']['username'] = 'sorav';
-        $db['default']['password'] = 'root@123'; 
+        $db['default']['username'] = 'root';
+        $db['default']['password'] = ''; 
         break;
     case 'testing':
         $db['default']['username'] = 'root';
-        $db['default']['password'] = 'root';
+        $db['default']['password'] = '';
         break;
     case 'demo':
         $db['default']['database'] = 'amitex';
-        $db['default']['username'] = 'amitex';
-        $db['default']['password'] = 'zgCkiw0xe6$A';
+        $db['default']['username'] = 'root';
+        $db['default']['password'] = '';
         break;
     case 'production':
-        $db['default']['database'] = 'amitexdt_sorav';
-        $db['default']['username'] = 'amitexdt_sorav';
-        $db['default']['password'] = '_477Ni9F8yoo_ZRW';
+        $db['default']['database'] = 'amitex';
+        $db['default']['username'] = 'root';
+        $db['default']['password'] = '';
         break;
 }
